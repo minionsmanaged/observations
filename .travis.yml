@@ -1,0 +1,13 @@
+---
+language: python
+jobs:
+  include:
+    - if: commit_message =~ /^observations of running instances in aws$/
+      name: observe tasks on  gecko-t/win10-64
+      env: worker-pool=gecko-t/win10-64
+install:
+  - pip3 install --upgrade pip
+  - pip3 install pyyaml
+  - pip3 install urllib3
+script:
+- python ./ci/observe-tasks.py
