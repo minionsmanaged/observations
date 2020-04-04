@@ -1,28 +1,37 @@
----
 language: python
 jobs:
   include:
-    - if: commit_message =~ /^observations of running instances in aws$/
-      name: observe tasks on  gecko-1/b-win2012
-      env: pool=gecko-1/b-win2012
-    - if: commit_message =~ /^observations of running instances in aws$/
-      name: observe tasks on  gecko-3/b-win2012
-      env: pool=gecko-3/b-win2012
-    - if: commit_message =~ /^observations of running instances in aws$/
-      name: observe tasks on  gecko-t/t-win7-32
-      env: pool=gecko-t/t-win7-32
-    - if: commit_message =~ /^observations of running instances in aws$/
-      name: observe tasks on  gecko-t/t-win7-32-gpu
-      env: pool=gecko-t/t-win7-32-gpu
-    - if: commit_message =~ /^observations of running instances in aws$/
-      name: observe tasks on  gecko-t/t-win10-64
-      env: pool=gecko-t/t-win10-64
-    - if: commit_message =~ /^observations of running instances in aws$/
-      name: observe tasks on  gecko-t/win10-64-gpu-s
-      env: pool=gecko-t/t-win10-64-gpu-s
+  - if: commit_message =~ /^observations of running instances in aws$/
+    name: observe tasks on  gecko-1/b-win2012
+    env: pool=gecko-1/b-win2012
+    after_success: "./ci/push-task-observations.sh"
+  - if: commit_message =~ /^observations of running instances in aws$/
+    name: observe tasks on  gecko-3/b-win2012
+    env: pool=gecko-3/b-win2012
+    after_success: "./ci/push-task-observations.sh"
+  - if: commit_message =~ /^observations of running instances in aws$/
+    name: observe tasks on  gecko-t/t-win7-32
+    env: pool=gecko-t/t-win7-32
+  - if: commit_message =~ /^observations of running instances in aws$/
+    name: observe tasks on  gecko-t/t-win7-32-gpu
+    env: pool=gecko-t/t-win7-32-gpu
+    after_success: "./ci/push-task-observations.sh"
+  - if: commit_message =~ /^observations of running instances in aws$/
+    name: observe tasks on  gecko-t/t-win10-64
+    env: pool=gecko-t/t-win10-64
+    after_success: "./ci/push-task-observations.sh"
+  - if: commit_message =~ /^observations of running instances in aws$/
+    name: observe tasks on  gecko-t/win10-64-gpu-s
+    env: pool=gecko-t/t-win10-64-gpu-s
+    after_success: "./ci/push-task-observations.sh"
 install:
-  - pip3 install --upgrade pip
-  - pip3 install pyyaml
-  - pip3 install urllib3
+- pip3 install --upgrade pip
+- pip3 install pyyaml
+- pip3 install urllib3
 script:
 - python3 ./ci/observe-tasks.py
+env:
+  global:
+  - GIT_NAME: Travis-CI
+  - GIT_EMAIL: travis.ci.build@gmail.com
+  - secure: G6N0ogAqskF24gdfaATXlpKVeDDNtcTEdAvXU9YjxCbV4oXewNa61NztJ5gPdmcXOEfXoPyzIc6cz/rmws/9bnr5cCQRGxMN50EibNMT/R+ztgWR7hCuEpA8QsUiYwlIRYICbbXoRDiFnqII/7HFa6aOsU87W/A2iKwdr3x2hQJqtDtE/eFupirPML3424GRaK/kHSA/Z4pr0rZCtHln26dMsB7h+YJwIhBKnoc9Zhjei7YOYfCsTS9DjSJEUvRI0iCcEWFTaFSs0gVA3cDwu70V+9hTjfNejTzJbhXJKuwprQV2uKNtS9odi+yhf7tVK1y+3QZaAiKVxGUBr7jKnvyT4t895IZ/wLqArO4kHHUQpfVtyD8aaHf2B4VR7+Z1e7iV7GzjZV0GVMTFotB8tblKOEWpmtuQOvRj7+YTG7XTyAOFBZgHdLfwRhJ7rtI1jmEvaJfaX5jdiuD+QIm+I4CurL6gJdc4gm5gDUtgf2A5ZZzhAKbwh/lhbdMFu48VbquePjFt5OUIxnqeWNO8Xlhpo9ay0SSxIPIPWPHTjxYLsGWt0Vr/dEiO3njpo3WtV2nAEMyp1WmE+7JAwy21NFPvJdrHbFlwG+YHdmqPqExgGWxi835cWPBVIs1qd+SH4WzKN6CZDANbQ9ifOspMvafnFJGEWE5LIwMR16h57gA=
