@@ -4,26 +4,26 @@ jobs:
   - if: commit_message =~ /^observations of running instances in aws$/
     name: observe tasks on  gecko-1/b-win2012
     env: pool=gecko-1/b-win2012
-    after_success: "./ci/push-task-observations.sh"
+    after_success: ./ci/push-task-observations.sh
   - if: commit_message =~ /^observations of running instances in aws$/
     name: observe tasks on  gecko-3/b-win2012
     env: pool=gecko-3/b-win2012
-    after_success: "./ci/push-task-observations.sh"
+    after_success: ./ci/push-task-observations.sh
   - if: commit_message =~ /^observations of running instances in aws$/
     name: observe tasks on  gecko-t/t-win7-32
     env: pool=gecko-t/t-win7-32
   - if: commit_message =~ /^observations of running instances in aws$/
     name: observe tasks on  gecko-t/t-win7-32-gpu
     env: pool=gecko-t/t-win7-32-gpu
-    after_success: "./ci/push-task-observations.sh"
+    after_success: ./ci/push-task-observations.sh
   - if: commit_message =~ /^observations of running instances in aws$/
     name: observe tasks on  gecko-t/t-win10-64
     env: pool=gecko-t/t-win10-64
-    after_success: "./ci/push-task-observations.sh"
+    after_success: ./ci/push-task-observations.sh
   - if: commit_message =~ /^observations of running instances in aws$/
     name: observe tasks on  gecko-t/win10-64-gpu-s
     env: pool=gecko-t/t-win10-64-gpu-s
-    after_success: "./ci/push-task-observations.sh"
+    after_success: ./ci/push-task-observations.sh
 install:
 - pip3 install --upgrade pip
 - pip3 install pyyaml
