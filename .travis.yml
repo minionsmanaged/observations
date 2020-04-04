@@ -2,34 +2,49 @@ language: python
 jobs:
   include:
   - if: commit_message =~ /^observations of running instances in aws$/
-    name: observe tasks on  gecko-1/b-win2012
+    name: observe tasks on gecko-1/b-win2012
     env: pool=gecko-1/b-win2012
+    script:
+    - python3 ./ci/observe-tasks.py
     after_success: ./ci/push-task-observations.sh
   - if: commit_message =~ /^observations of running instances in aws$/
-    name: observe tasks on  gecko-3/b-win2012
+    name: observe tasks on gecko-3/b-win2012
     env: pool=gecko-3/b-win2012
+    script:
+    - python3 ./ci/observe-tasks.py
     after_success: ./ci/push-task-observations.sh
   - if: commit_message =~ /^observations of running instances in aws$/
-    name: observe tasks on  gecko-t/t-win7-32
+    name: observe tasks on gecko-t/t-win7-32
     env: pool=gecko-t/t-win7-32
+    script:
+    - python3 ./ci/observe-tasks.py
   - if: commit_message =~ /^observations of running instances in aws$/
-    name: observe tasks on  gecko-t/t-win7-32-gpu
+    name: observe tasks on gecko-t/t-win7-32-gpu
     env: pool=gecko-t/t-win7-32-gpu
+    script:
+    - python3 ./ci/observe-tasks.py
     after_success: ./ci/push-task-observations.sh
   - if: commit_message =~ /^observations of running instances in aws$/
-    name: observe tasks on  gecko-t/t-win10-64
+    name: observe tasks on gecko-t/t-win10-64
     env: pool=gecko-t/t-win10-64
+    script:
+    - python3 ./ci/observe-tasks.py
     after_success: ./ci/push-task-observations.sh
   - if: commit_message =~ /^observations of running instances in aws$/
-    name: observe tasks on  gecko-t/win10-64-gpu-s
+    name: observe tasks on gecko-t/win10-64-gpu-s
     env: pool=gecko-t/t-win10-64-gpu-s
+    script:
+    - python3 ./ci/observe-tasks.py
     after_success: ./ci/push-task-observations.sh
+  - if: commit_message !~ /^worker index$/
+    name: index workers
+    script:
+    - python3 ./ci/index-workers.py
+    after_success: ./ci/push-worker-indexes.sh
 install:
 - pip3 install --upgrade pip
 - pip3 install pyyaml
 - pip3 install urllib3
-script:
-- python3 ./ci/observe-tasks.py
 env:
   global:
   - GIT_NAME: Travis-CI
