@@ -22,7 +22,7 @@ for instance_file_path in glob.glob('workers/**/*.json', recursive = True):
       if 'expires' in instance['tc']:
         worker['expires'] = instance['tc']['expires']
       if 'recentTasks' in instance['tc']:
-        worker['tasks'] = map(lambda x: '{}/{}'.format(x['taskId'], x['runId']), instance['tc']['recentTasks'])
+        worker['tasks'] = list(map(lambda x: '{}/{}'.format(x['taskId'], x['runId']), instance['tc']['recentTasks']))
     workers[instance['WorkerPool']].append(worker)
 
 pools_index_path = 'pools.json'
