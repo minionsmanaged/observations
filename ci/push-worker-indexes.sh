@@ -7,5 +7,5 @@ git checkout master
 #git stash apply
 git pull
 git add ./*.json
-git commit -m "worker and pool indexes"
+git commit -m "worker index"
 git push --quiet "https://${GH_TOKEN}@github.com/minionsmanaged/observations.git" master:master
