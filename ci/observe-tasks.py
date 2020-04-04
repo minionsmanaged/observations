@@ -1,3 +1,3 @@
 import os
 
-print(os.environ['worker-pool'])
+print(os.environ['pool'])
