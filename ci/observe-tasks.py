@@ -23,7 +23,7 @@ for instance_file_path in glob.glob('workers/{}/*.json'.format(pool)):
         else:
           instance['tc'] = instance_queue_data
           with open(instance_file_path, 'w') as instance_file_write:
-            json.dump(instance, instance_file_write)
+            json.dump(instance, instance_file_write, indent = 2)
           print(instance)
     except urllib.error.HTTPError as err:
       print('error reading: {}'.format(instance_queue_url))
