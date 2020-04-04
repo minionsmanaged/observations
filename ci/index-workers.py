@@ -4,7 +4,7 @@ import os
 
 workers = {}
 pools = []
-for instance_file_path in glob.glob('workers/**/*.json'):
+for instance_file_path in glob.glob('workers/**/*.json', recursive = True):
   with open(instance_file_path, 'r') as instance_file_read:
     instance = json.load(instance_file_read)
     workerDomain, workerType = instance['WorkerPool'].split('/')
