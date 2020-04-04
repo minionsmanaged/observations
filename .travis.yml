@@ -3,11 +3,26 @@ language: python
 jobs:
   include:
     - if: commit_message =~ /^observations of running instances in aws$/
-      name: observe tasks on  gecko-t/win10-64
-      env: pool=gecko-t/win10-64
+      name: observe tasks on  gecko-1/b-win2012
+      env: pool=gecko-1/b-win2012
+    - if: commit_message =~ /^observations of running instances in aws$/
+      name: observe tasks on  gecko-3/b-win2012
+      env: pool=gecko-3/b-win2012
+    - if: commit_message =~ /^observations of running instances in aws$/
+      name: observe tasks on  gecko-t/t-win7-32
+      env: pool=gecko-t/t-win7-32
+    - if: commit_message =~ /^observations of running instances in aws$/
+      name: observe tasks on  gecko-t/t-win7-32-gpu
+      env: pool=gecko-t/t-win7-32-gpu
+    - if: commit_message =~ /^observations of running instances in aws$/
+      name: observe tasks on  gecko-t/t-win10-64
+      env: pool=gecko-t/t-win10-64
+    - if: commit_message =~ /^observations of running instances in aws$/
+      name: observe tasks on  gecko-t/win10-64-gpu-s
+      env: pool=gecko-t/t-win10-64-gpu-s
 install:
   - pip3 install --upgrade pip
   - pip3 install pyyaml
   - pip3 install urllib3
 script:
-- python ./ci/observe-tasks.py
+- python3 ./ci/observe-tasks.py
