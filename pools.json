@@ -11,54 +11,79 @@
   },
   "mobile": {
     "mobile-3": {
-      "decision": 3
+      "decision": 5,
+      "b-linux": 4
     },
     "mobile-1": {
       "decision": 1
     }
   },
+  "comm": {
+    "comm-1": {
+      "decision": 2,
+      "images": 1
+    },
+    "comm-3": {
+      "decision": 2,
+      "images": 1
+    }
+  },
+  "code": {
+    "code-coverage": {
+      "bot": 1
+    },
+    "code-review": {
+      "bot": 2
+    }
+  },
   "xpi": {
     "xpi-3": {
       "decision": 1
+    },
+    "xpi-1": {
+      "decision": 2
     }
   },
   "project": {
     "project-relman": {
-      "relman-svc": 1
+      "relman-svc": 2
     }
   },
   "gecko": {
     "gecko-2": {
-      "decision": 3
+      "decision": 3,
+      "images": 1
     },
     "gecko-1": {
-      "decision": 1,
-      "b-linux": 4
+      "decision": 3,
+      "b-linux": 3,
+      "images": 1
     },
     "gecko-3": {
       "t-linux-xlarge": 1,
-      "b-win2012": 8,
+      "b-win2012": 5,
       "decision": 7,
-      "b-linux": 13,
+      "b-linux": 9,
+      "images": 1,
       "b-linux-aws": 1
     },
     "gecko-t": {
-      "t-linux-xlarge": 142,
-      "t-win10-64-gpu-s": 52,
-      "t-win7-32": 122,
-      "t-win7-32-gpu": 49,
-      "t-linux-large": 216,
-      "t-win10-64": 46
-    }
-  },
-  "comm": {
-    "comm-3": {
-      "decision": 2
+      "t-linux-xlarge": 98,
+      "t-win10-64-gpu-s": 42,
+      "t-win7-32": 100,
+      "t-win7-32-gpu": 30,
+      "t-linux-large": 63,
+      "t-win10-64": 55
     }
   },
   "app-services": {
+    "app-services-1": {
+      "decision": 1,
+      "b-linux": 2
+    },
     "app-services-3": {
-      "decision": 1
+      "decision": 1,
+      "b-linux": 2
     }
   }
 }
