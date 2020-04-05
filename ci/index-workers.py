@@ -14,18 +14,18 @@ for instance_file_path in glob.glob('workers/**/*.json', recursive = True):
     if not project in pools:
       pools[project] = {'count': {'instance': 1, 'task': instanceTaskCount}}
     else:
-      pools[project]['count']['instance'] =+ 1
-      pools[project]['count']['task'] =+ instanceTaskCount
+      pools[project]['count']['instance'] += 1
+      pools[project]['count']['task'] += instanceTaskCount
     if not domain in pools[project]:
       pools[project][domain] = {'count': {'instance': 1, 'task': instanceTaskCount}}
     else:
-      pools[project][domain]['count']['instance'] =+ 1
-      pools[project][domain]['count']['task'] =+ instanceTaskCount
+      pools[project][domain]['count']['instance'] += 1
+      pools[project][domain]['count']['task'] += instanceTaskCount
     if not pool in pools[project][domain]:
       pools[project][domain][pool] = {'count': {'instance': 1, 'task': instanceTaskCount}}
     else:
-      pools[project][domain][pool]['count']['instance'] =+ 1
-      pools[project][domain][pool]['count']['task'] =+ instanceTaskCount
+      pools[project][domain][pool]['count']['instance'] += 1
+      pools[project][domain][pool]['count']['task'] += instanceTaskCount
 
     if not instance['WorkerPool'] in workers:
       workers[instance['WorkerPool']] = []
