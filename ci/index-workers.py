@@ -31,7 +31,7 @@ for instance_file_path in glob.glob('workers/**/*.json', recursive = True):
       if 'recentTasks' in instance['tc']:
         worker['tasks'] = list(map(lambda x: '{}/{}'.format(x['taskId'], x['runId']), instance['tc']['recentTasks']))
     workers[instance['WorkerPool']].append(worker)
-    print('{}/{}/{}/{} indexed'.format(project, domain, worker, project))
+    print('{}/{}/{}/{} indexed'.format(project, domain, pool, worker['id']))
 
 pools_index_path = 'pools.json'
 try:
