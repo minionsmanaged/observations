@@ -40,9 +40,10 @@ except OSError:
   pass
 with open(pools_index_path, 'w') as pools_file:
   json.dump(pools, pools_file, indent = 2)
+print('{} saved'.format(pools_index_path))
 for project in pools:
-  for domain in project:
-    for pool in domain:
+  for domain in pools[project]:
+    for pool in pools[project][domain]:
       pool_index_path = '{}-{}.json'.format(domain, pool)
       try:
         os.remove(pool_index_path)
@@ -50,3 +51,4 @@ for project in pools:
         pass
       with open(pool_index_path, 'w') as pool_file:
         json.dump(workers['{}/{}'.format(domain, pool)], pool_file, indent = 2)
+      print('{} saved'.format(pool_index_path))
