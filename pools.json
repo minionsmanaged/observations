@@ -17,14 +17,6 @@
       "decision": 1
     }
   },
-  "comm": {
-    "comm-1": {
-      "decision": 1
-    },
-    "comm-3": {
-      "decision": 2
-    }
-  },
   "xpi": {
     "xpi-3": {
       "decision": 1
@@ -44,22 +36,27 @@
     },
     "gecko-1": {
       "decision": 1,
-      "b-linux": 6
+      "b-linux": 5
     },
     "gecko-3": {
       "t-linux-xlarge": 1,
       "b-win2012": 9,
       "decision": 7,
-      "b-linux": 21,
+      "b-linux": 17,
       "b-linux-aws": 1
     },
     "gecko-t": {
       "t-linux-xlarge": 146,
       "t-win10-64-gpu-s": 57,
       "t-win7-32": 122,
-      "t-win7-32-gpu": 63,
-      "t-linux-large": 322,
-      "t-win10-64": 74
+      "t-win7-32-gpu": 56,
+      "t-linux-large": 307,
+      "t-win10-64": 69
+    }
+  },
+  "comm": {
+    "comm-3": {
+      "decision": 2
     }
   },
   "app-services": {
