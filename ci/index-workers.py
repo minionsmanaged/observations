@@ -7,11 +7,16 @@ pools = {}
 for instance_file_path in glob.glob('workers/**/*.json', recursive = True):
   with open(instance_file_path, 'r') as instance_file_read:
     instance = json.load(instance_file_read)
-    workerDomain, workerType = instance['WorkerPool'].split('/')
-    if not instance['WorkerPool'] in pools:
-      pools[instance['WorkerPool']] = 1
+    domain, worker = instance['WorkerPool'].split('/')
+    project = domain[:domain.rindex('-')] if '-' in domain else domain
+    if not project in pools:
+      pools[project] = {}
+    if not domain in pools[project]:
+      pools[project][domain] = {}
+    if not worker in pools[project][domain]:
+      pools[project][domain][worker] = 1
     else:
-      pools[instance['WorkerPool']] += 1
+      pools[project][domain][worker] += 1
     if not instance['WorkerPool'] in workers:
       workers[instance['WorkerPool']] = []
     worker = {
