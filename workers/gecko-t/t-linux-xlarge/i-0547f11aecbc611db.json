@@ -5,5 +5,20 @@
   "InstanceLifecycle": "spot",
   "ImageId": "ami-06ac9ee18e86b4892",
   "LaunchTime": "2020-04-05T10:45:33.000Z",
-  "PublicIpAddress": "54.205.157.204"
+  "PublicIpAddress": "54.205.157.204",
+  "tc": {
+    "workerType": "t-linux-xlarge",
+    "provisionerId": "gecko-t",
+    "workerId": "i-0547f11aecbc611db",
+    "workerGroup": "aws",
+    "recentTasks": [
+      {
+        "taskId": "GpPrw4d0QVS8Nst_Ub7-1w",
+        "runId": 0
+      }
+    ],
+    "expires": "2020-04-06T10:47:10.932Z",
+    "firstClaim": "2020-04-05T10:47:10.951Z",
+    "actions": []
+  }
 }
