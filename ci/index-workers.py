@@ -52,9 +52,9 @@ with open(pools_index_path, 'w') as pools_file:
   json.dump(pools, pools_file, indent = 2)
 print('{} saved'.format(pools_index_path))
 
-for project in [projectName in pools if projectName != 'count']:
-  for domain in [domainName in pools[project] if domainName != 'count']:
-    for pool in [poolName in pools[project][domain] if poolName != 'count']:
+for project in filter(lamdba x: x != 'count', pools):
+  for domain in filter(lamdba x: x != 'count', pools[project]):
+    for pool in filter(lamdba x: x != 'count', pools[project][domain]):
       pool_index_path = '{}-{}.json'.format(domain, pool)
       try:
         os.remove(pool_index_path)
