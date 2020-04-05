@@ -18,15 +18,18 @@ for instance_file_path in glob.glob('workers/{}/*.json'.format(pool)):
     try:
       with urllib.request.urlopen(instance_queue_url) as response:
         instance_queue_data = json.loads(response.read().decode())
-        if 'code' in instance_queue_data and instance_queue_data['code'] == 'ResourceNotFound':
-          print(instance_queue_data['message'])
-        else:
-          instance['tc'] = instance_queue_data
-          with open(instance_file_path, 'w') as instance_file_write:
-            json.dump(instance, instance_file_write, indent = 2)
-          if 'recentTasks' in instance_queue_data and len(instance_queue_data['recentTasks']) > 0:
-            print('{}/{}/{}  has {} recent tasks'.format(workerDomain, workerType, instance['InstanceId'], len(instance_queue_data['recentTasks'])))
-          else:
-            print('{}/{}/{}  has no recent tasks'.format(workerDomain, workerType, instance['InstanceId']))
     except urllib.error.HTTPError as err:
       print('error reading: {}'.format(instance_queue_url))
+      instance_queue_data = None
+
+    if instance_queue_data is not None and 'code' in instance_queue_data and instance_queue_data['code'] == 'ResourceNotFound':
+      print(instance_queue_data['message'])
+    elif instance_queue_data is not None:
+      instance['tc'] = instance_queue_data
+      if 'recentTasks' in instance_queue_data and len(instance_queue_data['recentTasks']) > 0:
+        print('{}/{}/{}  has {} recent tasks'.format(workerDomain, workerType, instance['InstanceId'], len(instance_queue_data['recentTasks'])))
+      else:
+        print('{}/{}/{}  has no recent tasks'.format(workerDomain, workerType, instance['InstanceId']))
+
+    with open(instance_file_path, 'w') as instance_file_write:
+      json.dump(instance, instance_file_write, indent = 2)
