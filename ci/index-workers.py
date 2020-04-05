@@ -9,14 +9,24 @@ for instance_file_path in glob.glob('workers/**/*.json', recursive = True):
     instance = json.load(instance_file_read)
     domain, pool = instance['WorkerPool'].split('/')
     project = domain[:domain.rindex('-')] if '-' in domain else domain
+    instanceTaskCount = len(instance['tc']['recentTasks']) if 'tc' in instance and 'recentTasks' in instance['tc'] else 0
+
     if not project in pools:
-      pools[project] = {}
-    if not domain in pools[project]:
-      pools[project][domain] = {}
-    if not pool in pools[project][domain]:
-      pools[project][domain][pool] = 1
+      pools[project] = {'count': {'instance': 1, 'task': instanceTaskCount}}
     else:
-      pools[project][domain][pool] += 1
+      pools[project]['count']['instance'] =+ 1
+      pools[project]['count']['task'] =+ instanceTaskCount
+    if not domain in pools[project]:
+      pools[project][domain] = {'count': {'instance': 1, 'task': instanceTaskCount}}
+    else:
+      pools[project][domain]['count']['instance'] =+ 1
+      pools[project][domain]['count']['task'] =+ instanceTaskCount
+    if not pool in pools[project][domain]:
+      pools[project][domain][pool] = {'count': {'instance': 1, 'task': instanceTaskCount}}
+    else:
+      pools[project][domain][pool]['count']['instance'] =+ 1
+      pools[project][domain][pool]['count']['task'] =+ instanceTaskCount
+
     if not instance['WorkerPool'] in workers:
       workers[instance['WorkerPool']] = []
     worker = {
@@ -41,9 +51,10 @@ except OSError:
 with open(pools_index_path, 'w') as pools_file:
   json.dump(pools, pools_file, indent = 2)
 print('{} saved'.format(pools_index_path))
-for project in pools:
-  for domain in pools[project]:
-    for pool in pools[project][domain]:
+
+for project in [projectName in pools if projectName != 'count']:
+  for domain in [domainName in pools[project] if domainName != 'count']:
+    for pool in [poolName in pools[project][domain] if poolName != 'count']:
       pool_index_path = '{}-{}.json'.format(domain, pool)
       try:
         os.remove(pool_index_path)
