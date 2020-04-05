@@ -3,20 +3,20 @@ import json
 import os
 
 workers = {}
-pools = {}
+projects = {}
 for instance_file_path in glob.glob('workers/**/*.json', recursive = True):
   with open(instance_file_path, 'r') as instance_file_read:
     instance = json.load(instance_file_read)
     domain, worker = instance['WorkerPool'].split('/')
     project = domain[:domain.rindex('-')] if '-' in domain else domain
-    if not project in pools:
-      pools[project] = {}
-    if not domain in pools[project]:
-      pools[project][domain] = {}
-    if not worker in pools[project][domain]:
-      pools[project][domain][worker] = 1
+    if not project in projects:
+      projects[project] = {}
+    if not domain in projects[project]:
+      projects[project][domain] = {}
+    if not worker in projects[project][domain]:
+      projects[project][domain][worker] = 1
     else:
-      pools[project][domain][worker] += 1
+      projects[project][domain][worker] += 1
     if not instance['WorkerPool'] in workers:
       workers[instance['WorkerPool']] = []
     worker = {
@@ -39,11 +39,13 @@ except OSError:
   pass
 with open(pools_index_path, 'w') as pools_file:
   json.dump(pools, pools_file, indent = 2)
-for pool in pools:
-  pool_index_path = '{}.json'.format(pool.replace('/', '-'))
-  try:
-    os.remove(pool_index_path)
-  except OSError:
-    pass
-  with open(pool_index_path, 'w') as pool_file:
-    json.dump(workers[pool], pool_file, indent = 2)
+for project in projects:
+  for domain in project:
+    for worker in domain:
+      pool_index_path = '{}-{}.json'.format(domain, worker)
+      try:
+        os.remove(pool_index_path)
+      except OSError:
+        pass
+      with open(pool_index_path, 'w') as pool_file:
+        json.dump(workers['{}/{}'.format(domain, worker)], pool_file, indent = 2)
