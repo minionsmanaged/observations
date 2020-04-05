@@ -1,35 +1,70 @@
 {
-  "infra/hg-push": 1,
-  "l10n-3/decision": 1,
-  "mobile-3/decision": 4,
-  "comm-1/decision": 2,
-  "comm-1/images": 1,
-  "code-coverage/bot": 1,
-  "xpi-3/decision": 1,
-  "code-review/bot": 2,
-  "project-relman/relman-svc": 1,
-  "gecko-2/decision": 3,
-  "comm-3/decision": 2,
-  "comm-3/images": 1,
-  "xpi-1/decision": 1,
-  "gecko-1/decision": 4,
-  "gecko-1/b-linux": 1,
-  "gecko-1/images": 1,
-  "app-services-1/decision": 1,
-  "app-services-1/b-linux": 1,
-  "app-services-3/decision": 1,
-  "app-services-3/b-linux": 2,
-  "mobile-1/decision": 1,
-  "mobile-1/b-linux-large": 122,
-  "gecko-3/b-win2012": 11,
-  "gecko-3/decision": 7,
-  "gecko-3/b-linux": 78,
-  "gecko-3/images": 1,
-  "gecko-3/b-linux-aws": 1,
-  "gecko-t/t-linux-xlarge": 76,
-  "gecko-t/t-win10-64-gpu-s": 41,
-  "gecko-t/t-win7-32": 14,
-  "gecko-t/t-win7-32-gpu": 4,
-  "gecko-t/t-linux-large": 7,
-  "gecko-t/t-win10-64": 117
+  "infra": {
+    "infra": {
+      "hg-push": 1
+    }
+  },
+  "l10n": {
+    "l10n-3": {
+      "decision": 1
+    }
+  },
+  "mobile": {
+    "mobile-3": {
+      "decision": 5
+    },
+    "mobile-1": {
+      "decision": 1
+    }
+  },
+  "xpi": {
+    "xpi-3": {
+      "decision": 1
+    },
+    "xpi-1": {
+      "decision": 1
+    }
+  },
+  "code": {
+    "code-review": {
+      "bot": 2
+    }
+  },
+  "project": {
+    "project-relman": {
+      "relman-svc": 2
+    }
+  },
+  "gecko": {
+    "gecko-2": {
+      "decision": 3
+    },
+    "gecko-1": {
+      "decision": 2,
+      "b-linux": 3
+    },
+    "gecko-3": {
+      "b-win2012": 3,
+      "decision": 7,
+      "b-linux": 9
+    },
+    "gecko-t": {
+      "t-linux-xlarge": 58,
+      "t-win10-64-gpu-s": 32,
+      "t-win7-32": 43,
+      "t-win7-32-gpu": 21,
+      "t-linux-large": 8,
+      "t-win10-64": 39
+    }
+  },
+  "comm": {
+    "comm-3": {
+      "decision": 2
+    }
+  },
+  "app-services": {
+    "app-services-3": {
+      "decision": 1
+    }
+  }
 }
