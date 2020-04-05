@@ -3,13 +3,15 @@ import json
 import os
 
 workers = {}
-pools = []
+pools = {}
 for instance_file_path in glob.glob('workers/**/*.json', recursive = True):
   with open(instance_file_path, 'r') as instance_file_read:
     instance = json.load(instance_file_read)
     workerDomain, workerType = instance['WorkerPool'].split('/')
     if not instance['WorkerPool'] in pools:
-      pools.append(instance['WorkerPool'])
+      pools[instance['WorkerPool']] = 1
+    else:
+      pools[instance['WorkerPool']] += 1
     if not instance['WorkerPool'] in workers:
       workers[instance['WorkerPool']] = []
     worker = {
