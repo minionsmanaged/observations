@@ -24,13 +24,17 @@ for instance_file_path in glob.glob('workers/{}/*.json'.format(pool)):
           instance_queue_data = {}
           if 'firstClaim' in queue_response:
             instance_queue_data['claim'] = queue_response['firstClaim']
+            print('{}/{}/{} made a first claim at: {}'.format(workerDomain, workerType, instance['InstanceId'], instance_queue_data['claim']))
           if 'expires' in queue_response:
             instance_queue_data['expires'] = queue_response['expires']
+            print('{}/{}/{} expires at: {}'.format(workerDomain, workerType, instance['InstanceId'], instance_queue_data['expires']))
           if 'recentTasks' in queue_response and len(queue_response['recentTasks']) > 0:
             instance_queue_data['tasks'] = list(map(lambda x: { 'task': x['taskId'], 'run': x['runId'] }, queue_response['recentTasks']))
+            print('{}/{}/{} has {} recent tasks'.format(workerDomain, workerType, instance['InstanceId'], len(instance_queue_data['tasks'])))
 
           instance_tasks_file_path = instance_file_path.replace('/workers/', '/tasks/')
           with open(instance_tasks_file_path, 'w') as instance_tasks_file_write:
             json.dump(instance_queue_data, instance_tasks_file_write, indent = 2)
+            print('{} saved'.format(instance_tasks_file_path))
     except urllib.error.HTTPError as err:
       print('error reading: {}'.format(instance_queue_url))
