@@ -8,7 +8,7 @@ from urllib.error import HTTPError
 pool = os.environ['pool']
 print(pool)
 
-if not os.path.isdir('tasks/{}'.format(pool))
+if not os.path.isdir('tasks/{}'.format(pool)):
   os.makedirs('tasks/{}'.format(pool))
 
 for instance_file_path in glob.glob('workers/{}/*.json'.format(pool)):
