@@ -8,8 +8,20 @@ jobs:
     - python3 ./ci/observe-tasks.py
     after_success: ./ci/push-task-observations.sh
   - if: commit_message =~ /^observations of running instances in aws$/
+    name: observe tasks on gecko-1/b-linux-large
+    env: pool=gecko-1/b-linux-large
+    script:
+    - python3 ./ci/observe-tasks.py
+    after_success: ./ci/push-task-observations.sh
+  - if: commit_message =~ /^observations of running instances in aws$/
     name: observe tasks on gecko-3/b-linux
     env: pool=gecko-3/b-linux
+    script:
+    - python3 ./ci/observe-tasks.py
+    after_success: ./ci/push-task-observations.sh
+  - if: commit_message =~ /^observations of running instances in aws$/
+    name: observe tasks on gecko-3/b-linux-aws
+    env: pool=gecko-3/b-linux-aws
     script:
     - python3 ./ci/observe-tasks.py
     after_success: ./ci/push-task-observations.sh
