@@ -32,7 +32,7 @@ for instance_file_path in glob.glob('workers/{}/*.json'.format(pool)):
             instance_queue_data['tasks'] = list(map(lambda x: { 'task': x['taskId'], 'run': x['runId'] }, queue_response['recentTasks']))
             print('{}/{}/{} has {} recent tasks'.format(workerDomain, workerType, instance['InstanceId'], len(instance_queue_data['tasks'])))
 
-          instance_tasks_file_path = instance_file_path.replace('/workers/', '/tasks/')
+          instance_tasks_file_path = instance_file_path.replace('workers/', 'tasks/')
           with open(instance_tasks_file_path, 'w') as instance_tasks_file_write:
             json.dump(instance_queue_data, instance_tasks_file_write, indent = 2)
             print('{} saved'.format(instance_tasks_file_path))

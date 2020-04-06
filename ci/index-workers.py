@@ -14,7 +14,7 @@ for instance_file_path in glob.glob('workers/**/*.json', recursive = True):
     instanceTasks = None
     instanceClaim = None
     instanceExpires = None
-    instance_tasks_file_path = instance_file_path.replace('/workers/', '/tasks/')
+    instance_tasks_file_path = instance_file_path.replace('workers/', 'tasks/')
     if os.path.isfile(instance_tasks_file_path):
       with open(instance_tasks_file_path, 'r') as instance_tasks_file_read:
         instance_tasks = json.load(instance_tasks_file_read)
