@@ -8,10 +8,8 @@ temp_branch=${random_uuid:(-12)}
 git checkout -b ${temp_branch}
 git add ./*.json
 git commit -m "worker index"
-git format-patch master --stdout > ${temp_branch}.patch
+git_ref=$(git rev-parse --verify HEAD)
 git checkout master
 git pull
-git apply ${temp_branch}.patch --stat
-git apply ${temp_branch}.patch --check
-git apply ${temp_branch}.patch
+git cherry-pick ${git_ref}
 git push --quiet "https://${GH_TOKEN}@github.com/minionsmanaged/observations.git" master:master
