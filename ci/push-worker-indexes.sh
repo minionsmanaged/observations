@@ -11,5 +11,6 @@ git commit -m "worker index"
 git_ref=$(git rev-parse --verify HEAD)
 git checkout master
 git pull
-git cherry-pick ${git_ref}
-git push --quiet "https://${GH_TOKEN}@github.com/minionsmanaged/observations.git" master:master
+if git cherry-pick ${git_ref}; then
+  git push --quiet "https://${GH_TOKEN}@github.com/minionsmanaged/observations.git" master:master
+fi

@@ -8,10 +8,9 @@ temp_branch=${random_uuid:(-12)}
 git checkout -b ${temp_branch}
 git add workers/${pool}
 git commit -m "tc queue observations for ${pool}"
-git format-patch master --stdout > ${temp_branch}.patch
+git_ref=$(git rev-parse --verify HEAD)
 git checkout master
 git pull
-git apply ${temp_branch}.patch --stat
-git apply ${temp_branch}.patch --check
-git apply ${temp_branch}.patch
-git push --quiet "https://${GH_TOKEN}@github.com/minionsmanaged/observations.git" master:master
+if git cherry-pick ${git_ref}; then
+  git push --quiet "https://${GH_TOKEN}@github.com/minionsmanaged/observations.git" master:master
+fi
