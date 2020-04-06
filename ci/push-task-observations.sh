@@ -6,7 +6,7 @@ git config user.email "${GIT_EMAIL}"
 random_uuid=$(uuidgen --random)
 temp_branch=${random_uuid:(-12)}
 git checkout -b ${temp_branch}
-git add workers/${pool}
+git add tasks/${pool}
 git commit -m "tc queue observations for ${pool}"
 git_ref=$(git rev-parse --verify HEAD)
 git checkout master
