@@ -10,7 +10,17 @@ git add tasks/${pool}
 git commit -m "tc queue observations for ${pool}"
 git_ref=$(git rev-parse --verify HEAD)
 git checkout master
-git pull
-if git cherry-pick ${git_ref}; then
-  git push --quiet "https://${GH_TOKEN}@github.com/minionsmanaged/observations.git" master:master
-fi
+
+push_attempts=0
+push_success=false
+until [ "${push_success}" = true ] || [ ${push_attempts} -gt 3 ]; do
+  ((push_attempts=push_attempts+1))
+  git fetch --all
+  git reset --hard origin/master
+  if git cherry-pick ${git_ref} && git push --quiet "https://${GH_TOKEN}@github.com/minionsmanaged/observations.git" master:master; then
+    push_success=true
+    echo "push success on attempt ${push_attempts}"
+  else
+    echo "push failure on attempt ${push_attempts}"
+  fi
+done
