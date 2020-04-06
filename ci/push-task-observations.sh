@@ -11,7 +11,7 @@ git commit -m "tc queue observations for ${pool}"
 git format-patch master --stdout > ${temp_branch}.patch
 git checkout master
 git pull
-if git apply --stat ${temp_branch}.patch && git apply --check ${temp_branch}.patch; then
-  git apply ${temp_branch}.patch
-  git push --quiet "https://${GH_TOKEN}@github.com/minionsmanaged/observations.git" master:master
-fi
+git apply ${temp_branch}.patch --stat
+git apply ${temp_branch}.patch --check
+git apply ${temp_branch}.patch
+git push --quiet "https://${GH_TOKEN}@github.com/minionsmanaged/observations.git" master:master
