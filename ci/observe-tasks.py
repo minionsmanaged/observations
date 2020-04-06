@@ -27,7 +27,7 @@ for instance_file_path in glob.glob('workers/{}/*.json'.format(pool)):
           if 'expires' in queue_response:
             instance_queue_data['expires'] = queue_response['expires']
           if 'recentTasks' in queue_response and len(queue_response['recentTasks']) > 0:
-            instance_queue_data['tasks'] = map(lambda x: { 'task': x['taskId'], 'run': x['runId'] }, queue_response['recentTasks'])
+            instance_queue_data['tasks'] = list(map(lambda x: { 'task': x['taskId'], 'run': x['runId'] }, queue_response['recentTasks']))
 
           instance_tasks_file_path = instance_file_path.replace('/workers/', '/tasks/')
           with open(instance_tasks_file_path, 'w') as instance_tasks_file_write:
