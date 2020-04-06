@@ -42,6 +42,7 @@ jobs:
     env: pool=gecko-t/t-win7-32
     script:
     - python3 ./ci/observe-tasks.py
+    after_success: ./ci/push-task-observations.sh
   - if: commit_message =~ /^observations of running instances in aws$/
     name: observe tasks on gecko-t/t-win7-32-gpu
     env: pool=gecko-t/t-win7-32-gpu
