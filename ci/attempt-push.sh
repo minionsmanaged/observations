@@ -3,7 +3,8 @@
 git config user.name "${GIT_NAME}"
 git config user.email "${GIT_EMAIL}"
 
-temp_branch=$(uuidgen --random)
+random_uuid=$(uuidgen --random)
+temp_branch=${random_uuid:(-12)}
 git checkout -b ${temp_branch}
 git add $1
 git commit -m $2
