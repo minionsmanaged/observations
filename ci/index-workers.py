@@ -9,7 +9,22 @@ for instance_file_path in glob.glob('workers/**/*.json', recursive = True):
     instance = json.load(instance_file_read)
     domain, pool = instance['WorkerPool'].split('/')
     project = domain[:domain.rindex('-')] if '-' in domain else domain
-    instanceTaskCount = len(instance['tc']['recentTasks']) if 'tc' in instance and 'recentTasks' in instance['tc'] else 0
+
+    instanceTaskCount = 0
+    instanceTasks = None
+    instanceClaim = None
+    instanceExpires = None
+    instance_tasks_file_path = instance_file_path.replace('/workers/', '/tasks/')
+    if os.path.isfile(instance_tasks_file_path):
+      with open(instance_tasks_file_path, 'r') as instance_tasks_file_read:
+        instance_tasks = json.load(instance_tasks_file_read)
+        if 'tasks' in instance_tasks:
+          instanceTasks = instance_tasks['tasks']
+          instanceTaskCount = len(instanceTasks)
+        if 'claim' in instance_tasks:
+          instanceClaim = instance_tasks['claim']
+        if 'expires' in instance_tasks:
+          instanceClaim = instance_tasks['expires']
 
     if not project in pools:
       pools[project] = {'count': {'instance': 1, 'task': instanceTaskCount}}
@@ -33,13 +48,12 @@ for instance_file_path in glob.glob('workers/**/*.json', recursive = True):
       'id': instance['InstanceId'],
       'launch': instance['LaunchTime'],
     }
-    if 'tc' in instance:
-      if 'firstClaim' in instance['tc']:
-        worker['claim'] = instance['tc']['firstClaim']
-      if 'expires' in instance['tc']:
-        worker['expires'] = instance['tc']['expires']
-      if 'recentTasks' in instance['tc']:
-        worker['tasks'] = list(map(lambda x: '{}/{}'.format(x['taskId'], x['runId']), instance['tc']['recentTasks']))
+    if instanceClaim is not None:
+      worker['claim'] = instanceClaim
+    if instanceExpires is not None:
+      worker['expires'] = instanceExpires
+    if instanceTasks is not None:
+      worker['tasks'] = list(map(lambda x: '{}/{}'.format(x['task'], x['run']), instanceTasks))
     workers[instance['WorkerPool']].append(worker)
     print('{}/{}/{}/{} indexed'.format(project, domain, pool, worker['id']))
 
