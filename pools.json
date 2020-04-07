@@ -1,22 +1,4 @@
 {
-  "infra": {
-    "count": {
-      "instance": 1,
-      "task": 0
-    },
-    "infra": {
-      "count": {
-        "instance": 1,
-        "task": 0
-      },
-      "hg-push": {
-        "count": {
-          "instance": 1,
-          "task": 0
-        }
-      }
-    }
-  },
   "mobile": {
     "count": {
       "instance": 4,
@@ -49,19 +31,13 @@
   },
   "comm": {
     "count": {
-      "instance": 28,
+      "instance": 26,
       "task": 0
     },
     "comm-1": {
       "count": {
-        "instance": 3,
+        "instance": 1,
         "task": 0
-      },
-      "decision": {
-        "count": {
-          "instance": 2,
-          "task": 0
-        }
       },
       "b-linux": {
         "count": {
@@ -175,8 +151,8 @@
   },
   "gecko": {
     "count": {
-      "instance": 1317,
-      "task": 6434
+      "instance": 1204,
+      "task": 5991
     },
     "gecko-2": {
       "count": {
@@ -192,25 +168,25 @@
     },
     "gecko-1": {
       "count": {
-        "instance": 33,
-        "task": 75
+        "instance": 25,
+        "task": 43
       },
       "b-win2012": {
         "count": {
-          "instance": 7,
-          "task": 12
+          "instance": 6,
+          "task": 7
         }
       },
       "decision": {
         "count": {
-          "instance": 3,
+          "instance": 2,
           "task": 0
         }
       },
       "b-linux": {
         "count": {
-          "instance": 23,
-          "task": 63
+          "instance": 17,
+          "task": 36
         }
       }
     },
@@ -258,8 +234,8 @@
     },
     "gecko-t": {
       "count": {
-        "instance": 1186,
-        "task": 5623
+        "instance": 1081,
+        "task": 5212
       },
       "t-linux-xlarge": {
         "count": {
@@ -275,8 +251,8 @@
       },
       "t-win7-32": {
         "count": {
-          "instance": 113,
-          "task": 302
+          "instance": 99,
+          "task": 262
         }
       },
       "t-win7-32-gpu": {
@@ -287,34 +263,22 @@
       },
       "t-linux-large": {
         "count": {
-          "instance": 483,
-          "task": 1720
+          "instance": 394,
+          "task": 1355
         }
       },
       "t-win10-64": {
         "count": {
-          "instance": 115,
-          "task": 379
+          "instance": 113,
+          "task": 373
         }
       }
     }
   },
   "app-services": {
     "count": {
-      "instance": 2,
+      "instance": 1,
       "task": 0
-    },
-    "app-services-1": {
-      "count": {
-        "instance": 1,
-        "task": 0
-      },
-      "decision": {
-        "count": {
-          "instance": 1,
-          "task": 0
-        }
-      }
     },
     "app-services-3": {
       "count": {
