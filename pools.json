@@ -1,22 +1,4 @@
 {
-  "taskgraph": {
-    "count": {
-      "instance": 1,
-      "task": 0
-    },
-    "taskgraph-t": {
-      "count": {
-        "instance": 1,
-        "task": 0
-      },
-      "linux": {
-        "count": {
-          "instance": 1,
-          "task": 0
-        }
-      }
-    }
-  },
   "infra": {
     "count": {
       "instance": 2,
@@ -55,7 +37,7 @@
   },
   "mobile": {
     "count": {
-      "instance": 23,
+      "instance": 21,
       "task": 0
     },
     "mobile-3": {
@@ -78,7 +60,7 @@
     },
     "mobile-1": {
       "count": {
-        "instance": 8,
+        "instance": 6,
         "task": 0
       },
       "decision": {
@@ -89,7 +71,7 @@
       },
       "b-linux": {
         "count": {
-          "instance": 7,
+          "instance": 5,
           "task": 0
         }
       }
@@ -97,35 +79,29 @@
   },
   "comm": {
     "count": {
-      "instance": 6,
+      "instance": 4,
       "task": 0
     },
     "comm-1": {
       "count": {
-        "instance": 2,
+        "instance": 1,
         "task": 0
       },
       "decision": {
         "count": {
-          "instance": 2,
+          "instance": 1,
           "task": 0
         }
       }
     },
     "comm-3": {
       "count": {
-        "instance": 4,
+        "instance": 3,
         "task": 0
       },
       "decision": {
         "count": {
           "instance": 3,
-          "task": 0
-        }
-      },
-      "images": {
-        "count": {
-          "instance": 1,
           "task": 0
         }
       }
@@ -199,8 +175,8 @@
   },
   "gecko": {
     "count": {
-      "instance": 466,
-      "task": 2027
+      "instance": 459,
+      "task": 1987
     },
     "gecko-2": {
       "count": {
@@ -216,13 +192,13 @@
     },
     "gecko-1": {
       "count": {
-        "instance": 86,
-        "task": 532
+        "instance": 79,
+        "task": 492
       },
       "b-win2012": {
         "count": {
-          "instance": 26,
-          "task": 51
+          "instance": 25,
+          "task": 49
         }
       },
       "decision": {
@@ -233,8 +209,8 @@
       },
       "b-linux": {
         "count": {
-          "instance": 54,
-          "task": 481
+          "instance": 48,
+          "task": 443
         }
       }
     },
