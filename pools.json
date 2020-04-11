@@ -65,36 +65,6 @@
       }
     }
   },
-  "comm": {
-    "count": {
-      "instance": 4,
-      "task": 0
-    },
-    "comm-1": {
-      "count": {
-        "instance": 1,
-        "task": 0
-      },
-      "decision": {
-        "count": {
-          "instance": 1,
-          "task": 0
-        }
-      }
-    },
-    "comm-3": {
-      "count": {
-        "instance": 3,
-        "task": 0
-      },
-      "decision": {
-        "count": {
-          "instance": 3,
-          "task": 0
-        }
-      }
-    }
-  },
   "code": {
     "count": {
       "instance": 6,
@@ -157,8 +127,8 @@
   },
   "gecko": {
     "count": {
-      "instance": 1076,
-      "task": 4156
+      "instance": 1031,
+      "task": 4032
     },
     "gecko-2": {
       "count": {
@@ -198,8 +168,8 @@
     },
     "gecko-3": {
       "count": {
-        "instance": 98,
-        "task": 527
+        "instance": 92,
+        "task": 510
       },
       "t-linux-xlarge": {
         "count": {
@@ -221,8 +191,8 @@
       },
       "b-linux": {
         "count": {
-          "instance": 61,
-          "task": 418
+          "instance": 55,
+          "task": 401
         }
       },
       "images": {
@@ -240,8 +210,8 @@
     },
     "gecko-t": {
       "count": {
-        "instance": 959,
-        "task": 3543
+        "instance": 920,
+        "task": 3436
       },
       "t-linux-xlarge": {
         "count": {
@@ -251,19 +221,19 @@
       },
       "t-win10-64-gpu-s": {
         "count": {
-          "instance": 71,
-          "task": 99
+          "instance": 61,
+          "task": 86
         }
       },
       "t-win7-32": {
         "count": {
-          "instance": 100,
-          "task": 167
+          "instance": 90,
+          "task": 143
         }
       },
       "t-win7-32-gpu": {
         "count": {
-          "instance": 48,
+          "instance": 47,
           "task": 32
         }
       },
@@ -275,8 +245,26 @@
       },
       "t-win10-64": {
         "count": {
-          "instance": 167,
-          "task": 352
+          "instance": 149,
+          "task": 282
+        }
+      }
+    }
+  },
+  "comm": {
+    "count": {
+      "instance": 3,
+      "task": 0
+    },
+    "comm-3": {
+      "count": {
+        "instance": 3,
+        "task": 0
+      },
+      "decision": {
+        "count": {
+          "instance": 3,
+          "task": 0
         }
       }
     }
