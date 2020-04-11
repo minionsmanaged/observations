@@ -65,36 +65,6 @@
       }
     }
   },
-  "comm": {
-    "count": {
-      "instance": 4,
-      "task": 0
-    },
-    "comm-1": {
-      "count": {
-        "instance": 1,
-        "task": 0
-      },
-      "decision": {
-        "count": {
-          "instance": 1,
-          "task": 0
-        }
-      }
-    },
-    "comm-3": {
-      "count": {
-        "instance": 3,
-        "task": 0
-      },
-      "decision": {
-        "count": {
-          "instance": 3,
-          "task": 0
-        }
-      }
-    }
-  },
   "xpi": {
     "count": {
       "instance": 2,
@@ -145,8 +115,8 @@
   },
   "gecko": {
     "count": {
-      "instance": 408,
-      "task": 856
+      "instance": 405,
+      "task": 848
     },
     "gecko-2": {
       "count": {
@@ -168,8 +138,8 @@
     },
     "gecko-1": {
       "count": {
-        "instance": 62,
-        "task": 65
+        "instance": 61,
+        "task": 64
       },
       "b-win2012": {
         "count": {
@@ -185,8 +155,8 @@
       },
       "b-linux": {
         "count": {
-          "instance": 52,
-          "task": 58
+          "instance": 51,
+          "task": 57
         }
       },
       "b-linux-aws": {
@@ -198,8 +168,8 @@
     },
     "gecko-3": {
       "count": {
-        "instance": 19,
-        "task": 28
+        "instance": 17,
+        "task": 21
       },
       "b-win2012": {
         "count": {
@@ -215,8 +185,8 @@
       },
       "b-linux": {
         "count": {
-          "instance": 6,
-          "task": 23
+          "instance": 4,
+          "task": 16
         }
       },
       "images": {
@@ -275,22 +245,28 @@
       }
     }
   },
-  "app-services": {
+  "comm": {
     "count": {
-      "instance": 2,
+      "instance": 3,
       "task": 0
     },
-    "app-services-1": {
+    "comm-3": {
       "count": {
-        "instance": 1,
+        "instance": 3,
         "task": 0
       },
       "decision": {
         "count": {
-          "instance": 1,
+          "instance": 3,
           "task": 0
         }
       }
+    }
+  },
+  "app-services": {
+    "count": {
+      "instance": 1,
+      "task": 0
     },
     "app-services-3": {
       "count": {
