@@ -1,17 +1,35 @@
 {
+  "infra": {
+    "count": {
+      "instance": 1,
+      "task": 0
+    },
+    "infra": {
+      "count": {
+        "instance": 1,
+        "task": 0
+      },
+      "hg-push": {
+        "count": {
+          "instance": 1,
+          "task": 0
+        }
+      }
+    }
+  },
   "l10n": {
     "count": {
-      "instance": 2,
+      "instance": 1,
       "task": 0
     },
     "l10n-3": {
       "count": {
-        "instance": 2,
+        "instance": 1,
         "task": 0
       },
       "decision": {
         "count": {
-          "instance": 2,
+          "instance": 1,
           "task": 0
         }
       }
@@ -42,6 +60,42 @@
       "decision": {
         "count": {
           "instance": 1,
+          "task": 0
+        }
+      }
+    }
+  },
+  "comm": {
+    "count": {
+      "instance": 8,
+      "task": 0
+    },
+    "comm-1": {
+      "count": {
+        "instance": 4,
+        "task": 0
+      },
+      "decision": {
+        "count": {
+          "instance": 3,
+          "task": 0
+        }
+      },
+      "images": {
+        "count": {
+          "instance": 1,
+          "task": 0
+        }
+      }
+    },
+    "comm-3": {
+      "count": {
+        "instance": 4,
+        "task": 0
+      },
+      "decision": {
+        "count": {
+          "instance": 4,
           "task": 0
         }
       }
@@ -107,14 +161,32 @@
       }
     }
   },
+  "project": {
+    "count": {
+      "instance": 1,
+      "task": 0
+    },
+    "project-relman": {
+      "count": {
+        "instance": 1,
+        "task": 0
+      },
+      "relman-svc": {
+        "count": {
+          "instance": 1,
+          "task": 0
+        }
+      }
+    }
+  },
   "gecko": {
     "count": {
-      "instance": 65,
-      "task": 20
+      "instance": 66,
+      "task": 19
     },
     "gecko-2": {
       "count": {
-        "instance": 4,
+        "instance": 5,
         "task": 0
       },
       "decision": {
@@ -122,12 +194,18 @@
           "instance": 4,
           "task": 0
         }
+      },
+      "images": {
+        "count": {
+          "instance": 1,
+          "task": 0
+        }
       }
     },
     "gecko-1": {
       "count": {
         "instance": 4,
-        "task": 4
+        "task": 3
       },
       "decision": {
         "count": {
@@ -137,8 +215,14 @@
       },
       "b-linux": {
         "count": {
-          "instance": 2,
-          "task": 4
+          "instance": 1,
+          "task": 3
+        }
+      },
+      "images": {
+        "count": {
+          "instance": 1,
+          "task": 0
         }
       }
     },
@@ -155,11 +239,17 @@
       },
       "decision": {
         "count": {
-          "instance": 9,
+          "instance": 8,
           "task": 0
         }
       },
       "b-linux": {
+        "count": {
+          "instance": 1,
+          "task": 0
+        }
+      },
+      "images": {
         "count": {
           "instance": 1,
           "task": 0
@@ -215,43 +305,43 @@
       }
     }
   },
-  "comm": {
+  "app-services": {
     "count": {
       "instance": 6,
       "task": 0
     },
-    "comm-3": {
+    "app-services-1": {
       "count": {
-        "instance": 6,
+        "instance": 3,
         "task": 0
       },
       "decision": {
         "count": {
-          "instance": 5,
-          "task": 0
-        }
-      },
-      "images": {
-        "count": {
           "instance": 1,
           "task": 0
         }
+      },
+      "b-linux": {
+        "count": {
+          "instance": 2,
+          "task": 0
+        }
       }
-    }
-  },
-  "app-services": {
-    "count": {
-      "instance": 2,
-      "task": 0
     },
     "app-services-3": {
       "count": {
-        "instance": 2,
+        "instance": 3,
         "task": 0
       },
       "decision": {
         "count": {
           "instance": 2,
+          "task": 0
+        }
+      },
+      "b-linux": {
+        "count": {
+          "instance": 1,
           "task": 0
         }
       }
