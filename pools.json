@@ -47,48 +47,6 @@
       }
     }
   },
-  "comm": {
-    "count": {
-      "instance": 9,
-      "task": 0
-    },
-    "comm-1": {
-      "count": {
-        "instance": 1,
-        "task": 0
-      },
-      "b-linux": {
-        "count": {
-          "instance": 1,
-          "task": 0
-        }
-      }
-    },
-    "comm-t": {
-      "count": {
-        "instance": 5,
-        "task": 0
-      },
-      "t-linux-large": {
-        "count": {
-          "instance": 5,
-          "task": 0
-        }
-      }
-    },
-    "comm-3": {
-      "count": {
-        "instance": 3,
-        "task": 0
-      },
-      "decision": {
-        "count": {
-          "instance": 3,
-          "task": 0
-        }
-      }
-    }
-  },
   "xpi": {
     "count": {
       "instance": 2,
@@ -139,8 +97,8 @@
   },
   "gecko": {
     "count": {
-      "instance": 610,
-      "task": 1342
+      "instance": 594,
+      "task": 1315
     },
     "gecko-2": {
       "count": {
@@ -174,8 +132,8 @@
     },
     "gecko-3": {
       "count": {
-        "instance": 33,
-        "task": 33
+        "instance": 32,
+        "task": 32
       },
       "b-win2012": {
         "count": {
@@ -191,8 +149,8 @@
       },
       "b-linux": {
         "count": {
-          "instance": 15,
-          "task": 23
+          "instance": 14,
+          "task": 22
         }
       },
       "b-linux-aws": {
@@ -204,8 +162,8 @@
     },
     "gecko-t": {
       "count": {
-        "instance": 562,
-        "task": 1281
+        "instance": 547,
+        "task": 1255
       },
       "t-linux-xlarge": {
         "count": {
@@ -215,14 +173,14 @@
       },
       "t-win10-64-gpu-s": {
         "count": {
-          "instance": 60,
-          "task": 86
+          "instance": 55,
+          "task": 73
         }
       },
       "t-win7-32": {
         "count": {
-          "instance": 52,
-          "task": 89
+          "instance": 51,
+          "task": 86
         }
       },
       "t-win7-32-gpu": {
@@ -239,8 +197,38 @@
       },
       "t-win10-64": {
         "count": {
-          "instance": 64,
-          "task": 104
+          "instance": 55,
+          "task": 94
+        }
+      }
+    }
+  },
+  "comm": {
+    "count": {
+      "instance": 6,
+      "task": 0
+    },
+    "comm-t": {
+      "count": {
+        "instance": 3,
+        "task": 0
+      },
+      "t-linux-large": {
+        "count": {
+          "instance": 3,
+          "task": 0
+        }
+      }
+    },
+    "comm-3": {
+      "count": {
+        "instance": 3,
+        "task": 0
+      },
+      "decision": {
+        "count": {
+          "instance": 3,
+          "task": 0
         }
       }
     }
