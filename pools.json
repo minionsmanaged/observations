@@ -1,22 +1,4 @@
 {
-  "infra": {
-    "count": {
-      "instance": 2,
-      "task": 0
-    },
-    "infra": {
-      "count": {
-        "instance": 2,
-        "task": 0
-      },
-      "hg-push": {
-        "count": {
-          "instance": 2,
-          "task": 0
-        }
-      }
-    }
-  },
   "l10n": {
     "count": {
       "instance": 1,
@@ -60,36 +42,6 @@
       "decision": {
         "count": {
           "instance": 1,
-          "task": 0
-        }
-      }
-    }
-  },
-  "comm": {
-    "count": {
-      "instance": 4,
-      "task": 0
-    },
-    "comm-1": {
-      "count": {
-        "instance": 1,
-        "task": 0
-      },
-      "images": {
-        "count": {
-          "instance": 1,
-          "task": 0
-        }
-      }
-    },
-    "comm-3": {
-      "count": {
-        "instance": 3,
-        "task": 0
-      },
-      "decision": {
-        "count": {
-          "instance": 3,
           "task": 0
         }
       }
@@ -155,28 +107,10 @@
       }
     }
   },
-  "project": {
-    "count": {
-      "instance": 1,
-      "task": 0
-    },
-    "project-relman": {
-      "count": {
-        "instance": 1,
-        "task": 0
-      },
-      "relman-svc": {
-        "count": {
-          "instance": 1,
-          "task": 0
-        }
-      }
-    }
-  },
   "gecko": {
     "count": {
-      "instance": 1016,
-      "task": 1049
+      "instance": 998,
+      "task": 1039
     },
     "gecko-2": {
       "count": {
@@ -192,8 +126,8 @@
     },
     "gecko-1": {
       "count": {
-        "instance": 27,
-        "task": 43
+        "instance": 21,
+        "task": 34
       },
       "b-win2012": {
         "count": {
@@ -203,14 +137,14 @@
       },
       "decision": {
         "count": {
-          "instance": 2,
+          "instance": 1,
           "task": 0
         }
       },
       "b-linux": {
         "count": {
-          "instance": 24,
-          "task": 42
+          "instance": 19,
+          "task": 33
         }
       }
     },
@@ -246,8 +180,8 @@
     },
     "gecko-t": {
       "count": {
-        "instance": 836,
-        "task": 825
+        "instance": 824,
+        "task": 824
       },
       "t-linux-xlarge": {
         "count": {
@@ -263,7 +197,7 @@
       },
       "t-win7-32": {
         "count": {
-          "instance": 91,
+          "instance": 80,
           "task": 25
         }
       },
@@ -281,8 +215,26 @@
       },
       "t-win10-64": {
         "count": {
-          "instance": 176,
-          "task": 158
+          "instance": 175,
+          "task": 157
+        }
+      }
+    }
+  },
+  "comm": {
+    "count": {
+      "instance": 3,
+      "task": 0
+    },
+    "comm-3": {
+      "count": {
+        "instance": 3,
+        "task": 0
+      },
+      "decision": {
+        "count": {
+          "instance": 3,
+          "task": 0
         }
       }
     }
