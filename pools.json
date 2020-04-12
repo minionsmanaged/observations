@@ -47,6 +47,36 @@
       }
     }
   },
+  "comm": {
+    "count": {
+      "instance": 4,
+      "task": 0
+    },
+    "comm-1": {
+      "count": {
+        "instance": 1,
+        "task": 0
+      },
+      "decision": {
+        "count": {
+          "instance": 1,
+          "task": 0
+        }
+      }
+    },
+    "comm-3": {
+      "count": {
+        "instance": 3,
+        "task": 0
+      },
+      "decision": {
+        "count": {
+          "instance": 3,
+          "task": 0
+        }
+      }
+    }
+  },
   "code": {
     "count": {
       "instance": 3,
@@ -109,7 +139,7 @@
   },
   "gecko": {
     "count": {
-      "instance": 59,
+      "instance": 60,
       "task": 16
     },
     "gecko-2": {
@@ -120,6 +150,18 @@
       "decision": {
         "count": {
           "instance": 3,
+          "task": 0
+        }
+      }
+    },
+    "gecko-1": {
+      "count": {
+        "instance": 1,
+        "task": 0
+      },
+      "decision": {
+        "count": {
+          "instance": 1,
           "task": 0
         }
       }
@@ -192,24 +234,6 @@
       "t-win10-64": {
         "count": {
           "instance": 2,
-          "task": 0
-        }
-      }
-    }
-  },
-  "comm": {
-    "count": {
-      "instance": 3,
-      "task": 0
-    },
-    "comm-3": {
-      "count": {
-        "instance": 3,
-        "task": 0
-      },
-      "decision": {
-        "count": {
-          "instance": 3,
           "task": 0
         }
       }
