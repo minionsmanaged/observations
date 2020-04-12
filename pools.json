@@ -1,4 +1,22 @@
 {
+  "infra": {
+    "count": {
+      "instance": 1,
+      "task": 0
+    },
+    "infra": {
+      "count": {
+        "instance": 1,
+        "task": 0
+      },
+      "hg-push": {
+        "count": {
+          "instance": 1,
+          "task": 0
+        }
+      }
+    }
+  },
   "l10n": {
     "count": {
       "instance": 1,
@@ -47,6 +65,78 @@
       }
     }
   },
+  "comm": {
+    "count": {
+      "instance": 7,
+      "task": 0
+    },
+    "comm-1": {
+      "count": {
+        "instance": 3,
+        "task": 0
+      },
+      "decision": {
+        "count": {
+          "instance": 2,
+          "task": 0
+        }
+      },
+      "images": {
+        "count": {
+          "instance": 1,
+          "task": 0
+        }
+      }
+    },
+    "comm-3": {
+      "count": {
+        "instance": 4,
+        "task": 0
+      },
+      "decision": {
+        "count": {
+          "instance": 3,
+          "task": 0
+        }
+      },
+      "images": {
+        "count": {
+          "instance": 1,
+          "task": 0
+        }
+      }
+    }
+  },
+  "code": {
+    "count": {
+      "instance": 4,
+      "task": 0
+    },
+    "code-coverage": {
+      "count": {
+        "instance": 1,
+        "task": 0
+      },
+      "bot": {
+        "count": {
+          "instance": 1,
+          "task": 0
+        }
+      }
+    },
+    "code-review": {
+      "count": {
+        "instance": 3,
+        "task": 0
+      },
+      "bot": {
+        "count": {
+          "instance": 3,
+          "task": 0
+        }
+      }
+    }
+  },
   "xpi": {
     "count": {
       "instance": 2,
@@ -77,19 +167,19 @@
       }
     }
   },
-  "code": {
+  "project": {
     "count": {
-      "instance": 3,
+      "instance": 1,
       "task": 0
     },
-    "code-review": {
+    "project-relman": {
       "count": {
-        "instance": 3,
+        "instance": 1,
         "task": 0
       },
-      "bot": {
+      "relman-svc": {
         "count": {
-          "instance": 3,
+          "instance": 1,
           "task": 0
         }
       }
@@ -97,12 +187,12 @@
   },
   "gecko": {
     "count": {
-      "instance": 356,
-      "task": 635
+      "instance": 951,
+      "task": 1083
     },
     "gecko-2": {
       "count": {
-        "instance": 2,
+        "instance": 3,
         "task": 0
       },
       "decision": {
@@ -110,12 +200,18 @@
           "instance": 2,
           "task": 0
         }
+      },
+      "images": {
+        "count": {
+          "instance": 1,
+          "task": 0
+        }
       }
     },
     "gecko-1": {
       "count": {
-        "instance": 6,
-        "task": 10
+        "instance": 18,
+        "task": 20
       },
       "b-win2012": {
         "count": {
@@ -125,26 +221,32 @@
       },
       "decision": {
         "count": {
-          "instance": 1,
+          "instance": 3,
           "task": 0
         }
       },
       "b-linux": {
         "count": {
-          "instance": 4,
-          "task": 8
+          "instance": 13,
+          "task": 18
+        }
+      },
+      "images": {
+        "count": {
+          "instance": 1,
+          "task": 0
         }
       }
     },
     "gecko-3": {
       "count": {
-        "instance": 53,
-        "task": 37
+        "instance": 50,
+        "task": 43
       },
       "b-win2012": {
         "count": {
-          "instance": 6,
-          "task": 0
+          "instance": 7,
+          "task": 6
         }
       },
       "decision": {
@@ -155,8 +257,14 @@
       },
       "b-linux": {
         "count": {
-          "instance": 38,
+          "instance": 33,
           "task": 37
+        }
+      },
+      "images": {
+        "count": {
+          "instance": 1,
+          "task": 0
         }
       },
       "b-linux-aws": {
@@ -168,60 +276,42 @@
     },
     "gecko-t": {
       "count": {
-        "instance": 295,
-        "task": 588
+        "instance": 880,
+        "task": 1020
       },
       "t-linux-xlarge": {
         "count": {
-          "instance": 252,
-          "task": 569
+          "instance": 289,
+          "task": 675
         }
       },
       "t-win10-64-gpu-s": {
         "count": {
-          "instance": 22,
+          "instance": 73,
           "task": 16
         }
       },
       "t-win7-32": {
         "count": {
-          "instance": 3,
-          "task": 0
+          "instance": 102,
+          "task": 65
         }
       },
       "t-win7-32-gpu": {
         "count": {
-          "instance": 13,
+          "instance": 31,
           "task": 0
         }
       },
       "t-linux-large": {
         "count": {
-          "instance": 3,
-          "task": 3
+          "instance": 240,
+          "task": 264
         }
       },
       "t-win10-64": {
         "count": {
-          "instance": 2,
-          "task": 0
-        }
-      }
-    }
-  },
-  "comm": {
-    "count": {
-      "instance": 3,
-      "task": 0
-    },
-    "comm-3": {
-      "count": {
-        "instance": 3,
-        "task": 0
-      },
-      "decision": {
-        "count": {
-          "instance": 3,
+          "instance": 145,
           "task": 0
         }
       }
@@ -229,17 +319,41 @@
   },
   "app-services": {
     "count": {
-      "instance": 1,
+      "instance": 6,
       "task": 0
     },
-    "app-services-3": {
+    "app-services-1": {
       "count": {
-        "instance": 1,
+        "instance": 3,
         "task": 0
       },
       "decision": {
         "count": {
           "instance": 1,
+          "task": 0
+        }
+      },
+      "b-linux": {
+        "count": {
+          "instance": 2,
+          "task": 0
+        }
+      }
+    },
+    "app-services-3": {
+      "count": {
+        "instance": 3,
+        "task": 0
+      },
+      "decision": {
+        "count": {
+          "instance": 1,
+          "task": 0
+        }
+      },
+      "b-linux": {
+        "count": {
+          "instance": 2,
           "task": 0
         }
       }
