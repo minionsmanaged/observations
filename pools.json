@@ -71,48 +71,6 @@
       }
     }
   },
-  "comm": {
-    "count": {
-      "instance": 6,
-      "task": 0
-    },
-    "comm-1": {
-      "count": {
-        "instance": 1,
-        "task": 0
-      },
-      "decision": {
-        "count": {
-          "instance": 1,
-          "task": 0
-        }
-      }
-    },
-    "comm-t": {
-      "count": {
-        "instance": 2,
-        "task": 0
-      },
-      "t-linux-xlarge": {
-        "count": {
-          "instance": 2,
-          "task": 0
-        }
-      }
-    },
-    "comm-3": {
-      "count": {
-        "instance": 3,
-        "task": 0
-      },
-      "decision": {
-        "count": {
-          "instance": 3,
-          "task": 0
-        }
-      }
-    }
-  },
   "xpi": {
     "count": {
       "instance": 2,
@@ -181,8 +139,8 @@
   },
   "gecko": {
     "count": {
-      "instance": 849,
-      "task": 2111
+      "instance": 845,
+      "task": 2102
     },
     "gecko-2": {
       "count": {
@@ -198,7 +156,7 @@
     },
     "gecko-1": {
       "count": {
-        "instance": 72,
+        "instance": 71,
         "task": 87
       },
       "b-win2012": {
@@ -209,7 +167,7 @@
       },
       "decision": {
         "count": {
-          "instance": 3,
+          "instance": 2,
           "task": 0
         }
       },
@@ -264,8 +222,8 @@
     },
     "gecko-t": {
       "count": {
-        "instance": 501,
-        "task": 1188
+        "instance": 498,
+        "task": 1179
       },
       "t-linux-xlarge": {
         "count": {
@@ -305,8 +263,38 @@
       },
       "t-win10-64": {
         "count": {
-          "instance": 102,
-          "task": 180
+          "instance": 99,
+          "task": 171
+        }
+      }
+    }
+  },
+  "comm": {
+    "count": {
+      "instance": 4,
+      "task": 0
+    },
+    "comm-t": {
+      "count": {
+        "instance": 1,
+        "task": 0
+      },
+      "t-linux-xlarge": {
+        "count": {
+          "instance": 1,
+          "task": 0
+        }
+      }
+    },
+    "comm-3": {
+      "count": {
+        "instance": 3,
+        "task": 0
+      },
+      "decision": {
+        "count": {
+          "instance": 3,
+          "task": 0
         }
       }
     }
