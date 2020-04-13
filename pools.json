@@ -47,42 +47,6 @@
       }
     }
   },
-  "comm": {
-    "count": {
-      "instance": 7,
-      "task": 0
-    },
-    "comm-1": {
-      "count": {
-        "instance": 1,
-        "task": 0
-      },
-      "decision": {
-        "count": {
-          "instance": 1,
-          "task": 0
-        }
-      }
-    },
-    "comm-3": {
-      "count": {
-        "instance": 6,
-        "task": 0
-      },
-      "decision": {
-        "count": {
-          "instance": 3,
-          "task": 0
-        }
-      },
-      "b-linux": {
-        "count": {
-          "instance": 3,
-          "task": 0
-        }
-      }
-    }
-  },
   "code": {
     "count": {
       "instance": 2,
@@ -145,8 +109,8 @@
   },
   "gecko": {
     "count": {
-      "instance": 299,
-      "task": 1287
+      "instance": 294,
+      "task": 1262
     },
     "gecko-2": {
       "count": {
@@ -186,8 +150,8 @@
     },
     "gecko-3": {
       "count": {
-        "instance": 218,
-        "task": 1078
+        "instance": 213,
+        "task": 1053
       },
       "t-linux-xlarge": {
         "count": {
@@ -209,14 +173,8 @@
       },
       "b-linux": {
         "count": {
-          "instance": 192,
-          "task": 1059
-        }
-      },
-      "images": {
-        "count": {
-          "instance": 1,
-          "task": 0
+          "instance": 188,
+          "task": 1034
         }
       },
       "b-linux-aws": {
@@ -275,25 +233,43 @@
       }
     }
   },
-  "app-services": {
+  "comm": {
     "count": {
-      "instance": 4,
+      "instance": 6,
       "task": 0
     },
-    "app-services-1": {
+    "comm-3": {
       "count": {
-        "instance": 3,
+        "instance": 6,
         "task": 0
       },
       "decision": {
         "count": {
-          "instance": 1,
+          "instance": 3,
           "task": 0
         }
       },
       "b-linux": {
         "count": {
-          "instance": 2,
+          "instance": 3,
+          "task": 0
+        }
+      }
+    }
+  },
+  "app-services": {
+    "count": {
+      "instance": 2,
+      "task": 0
+    },
+    "app-services-1": {
+      "count": {
+        "instance": 1,
+        "task": 0
+      },
+      "decision": {
+        "count": {
+          "instance": 1,
           "task": 0
         }
       }
