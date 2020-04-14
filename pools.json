@@ -37,12 +37,12 @@
   },
   "mobile": {
     "count": {
-      "instance": 105,
+      "instance": 16,
       "task": 0
     },
     "mobile-3": {
       "count": {
-        "instance": 101,
+        "instance": 13,
         "task": 0
       },
       "decision": {
@@ -59,14 +59,14 @@
       },
       "b-linux-large": {
         "count": {
-          "instance": 94,
+          "instance": 6,
           "task": 0
         }
       }
     },
     "mobile-1": {
       "count": {
-        "instance": 4,
+        "instance": 3,
         "task": 0
       },
       "decision": {
@@ -77,85 +77,7 @@
       },
       "b-linux": {
         "count": {
-          "instance": 3,
-          "task": 0
-        }
-      }
-    }
-  },
-  "comm": {
-    "count": {
-      "instance": 5,
-      "task": 0
-    },
-    "comm-1": {
-      "count": {
-        "instance": 2,
-        "task": 0
-      },
-      "decision": {
-        "count": {
-          "instance": 1,
-          "task": 0
-        }
-      },
-      "images": {
-        "count": {
-          "instance": 1,
-          "task": 0
-        }
-      }
-    },
-    "comm-t": {
-      "count": {
-        "instance": 1,
-        "task": 0
-      },
-      "t-win7-32": {
-        "count": {
-          "instance": 1,
-          "task": 0
-        }
-      }
-    },
-    "comm-3": {
-      "count": {
-        "instance": 2,
-        "task": 0
-      },
-      "decision": {
-        "count": {
           "instance": 2,
-          "task": 0
-        }
-      }
-    }
-  },
-  "code": {
-    "count": {
-      "instance": 18,
-      "task": 0
-    },
-    "code-coverage": {
-      "count": {
-        "instance": 1,
-        "task": 0
-      },
-      "bot": {
-        "count": {
-          "instance": 1,
-          "task": 0
-        }
-      }
-    },
-    "code-review": {
-      "count": {
-        "instance": 17,
-        "task": 0
-      },
-      "bot": {
-        "count": {
-          "instance": 17,
           "task": 0
         }
       }
@@ -191,10 +113,28 @@
       }
     }
   },
+  "code": {
+    "count": {
+      "instance": 14,
+      "task": 0
+    },
+    "code-review": {
+      "count": {
+        "instance": 14,
+        "task": 0
+      },
+      "bot": {
+        "count": {
+          "instance": 14,
+          "task": 0
+        }
+      }
+    }
+  },
   "gecko": {
     "count": {
-      "instance": 1794,
-      "task": 5902
+      "instance": 1775,
+      "task": 5864
     },
     "gecko-2": {
       "count": {
@@ -210,7 +150,7 @@
     },
     "gecko-1": {
       "count": {
-        "instance": 60,
+        "instance": 59,
         "task": 207
       },
       "b-win2012": {
@@ -229,12 +169,6 @@
         "count": {
           "instance": 51,
           "task": 197
-        }
-      },
-      "images": {
-        "count": {
-          "instance": 1,
-          "task": 0
         }
       },
       "b-linux-aws": {
@@ -288,8 +222,8 @@
     },
     "gecko-t": {
       "count": {
-        "instance": 1333,
-        "task": 4446
+        "instance": 1315,
+        "task": 4408
       },
       "t-linux-xlarge": {
         "count": {
@@ -317,40 +251,40 @@
       },
       "t-linux-large": {
         "count": {
-          "instance": 482,
-          "task": 1880
+          "instance": 480,
+          "task": 1874
         }
       },
       "t-win10-64": {
         "count": {
-          "instance": 327,
-          "task": 574
+          "instance": 311,
+          "task": 542
         }
       }
     }
   },
-  "app-services": {
+  "comm": {
     "count": {
-      "instance": 3,
+      "instance": 2,
       "task": 0
     },
-    "app-services-1": {
+    "comm-3": {
       "count": {
         "instance": 2,
         "task": 0
       },
       "decision": {
         "count": {
-          "instance": 1,
-          "task": 0
-        }
-      },
-      "b-linux": {
-        "count": {
-          "instance": 1,
+          "instance": 2,
           "task": 0
         }
       }
+    }
+  },
+  "app-services": {
+    "count": {
+      "instance": 1,
+      "task": 0
     },
     "app-services-3": {
       "count": {
