@@ -67,7 +67,7 @@
   },
   "comm": {
     "count": {
-      "instance": 4,
+      "instance": 5,
       "task": 0
     },
     "comm-1": {
@@ -84,12 +84,18 @@
     },
     "comm-3": {
       "count": {
-        "instance": 3,
+        "instance": 4,
         "task": 0
       },
       "decision": {
         "count": {
           "instance": 3,
+          "task": 0
+        }
+      },
+      "images": {
+        "count": {
+          "instance": 1,
           "task": 0
         }
       }
@@ -155,9 +161,27 @@
       }
     }
   },
+  "project": {
+    "count": {
+      "instance": 1,
+      "task": 0
+    },
+    "project-relman": {
+      "count": {
+        "instance": 1,
+        "task": 0
+      },
+      "relman-svc": {
+        "count": {
+          "instance": 1,
+          "task": 0
+        }
+      }
+    }
+  },
   "gecko": {
     "count": {
-      "instance": 3520,
+      "instance": 4733,
       "task": 15689
     },
     "gecko-2": {
@@ -174,42 +198,54 @@
     },
     "gecko-1": {
       "count": {
-        "instance": 86,
+        "instance": 187,
         "task": 373
       },
       "b-win2012": {
         "count": {
-          "instance": 36,
+          "instance": 86,
           "task": 51
         }
       },
       "decision": {
         "count": {
-          "instance": 12,
+          "instance": 13,
           "task": 0
         }
       },
       "b-linux": {
         "count": {
-          "instance": 38,
+          "instance": 86,
           "task": 322
         }
-      }
-    },
-    "gecko-3": {
-      "count": {
-        "instance": 870,
-        "task": 1423
       },
-      "t-linux-xlarge": {
+      "images": {
         "count": {
           "instance": 1,
           "task": 0
         }
       },
+      "b-linux-aws": {
+        "count": {
+          "instance": 1,
+          "task": 0
+        }
+      }
+    },
+    "gecko-3": {
+      "count": {
+        "instance": 896,
+        "task": 1423
+      },
+      "t-linux-xlarge": {
+        "count": {
+          "instance": 5,
+          "task": 0
+        }
+      },
       "b-win2012": {
         "count": {
-          "instance": 157,
+          "instance": 179,
           "task": 212
         }
       },
@@ -246,42 +282,48 @@
     },
     "gecko-t": {
       "count": {
-        "instance": 2561,
+        "instance": 3647,
         "task": 13893
       },
       "t-linux-xlarge": {
         "count": {
-          "instance": 632,
+          "instance": 815,
           "task": 6004
         }
       },
       "t-win10-64-gpu-s": {
         "count": {
-          "instance": 135,
+          "instance": 222,
           "task": 369
         }
       },
       "t-win7-32": {
         "count": {
-          "instance": 437,
+          "instance": 631,
           "task": 1113
         }
       },
       "t-win7-32-gpu": {
         "count": {
-          "instance": 142,
+          "instance": 154,
           "task": 311
+        }
+      },
+      "misc": {
+        "count": {
+          "instance": 21,
+          "task": 0
         }
       },
       "t-linux-large": {
         "count": {
-          "instance": 744,
+          "instance": 1285,
           "task": 4379
         }
       },
       "t-win10-64": {
         "count": {
-          "instance": 471,
+          "instance": 519,
           "task": 1717
         }
       }
@@ -289,13 +331,19 @@
   },
   "app-services": {
     "count": {
-      "instance": 2,
+      "instance": 5,
       "task": 0
     },
     "app-services-1": {
       "count": {
-        "instance": 1,
+        "instance": 2,
         "task": 0
+      },
+      "decision": {
+        "count": {
+          "instance": 1,
+          "task": 0
+        }
       },
       "b-linux": {
         "count": {
@@ -306,12 +354,18 @@
     },
     "app-services-3": {
       "count": {
-        "instance": 1,
+        "instance": 3,
         "task": 0
       },
       "decision": {
         "count": {
           "instance": 1,
+          "task": 0
+        }
+      },
+      "b-linux": {
+        "count": {
+          "instance": 2,
           "task": 0
         }
       }
